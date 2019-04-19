@@ -1,0 +1,26 @@
+<!doctype html>
+
+<html>
+	<head>
+		
+	</head>
+	
+	<body>
+		<h1>{{name}}</h1>
+		<hr>
+		<h2>Gender : {{gender}}</h2>
+		<hr>
+		<h2>Homeworld : {{homeworld}}</h2>
+		<hr>
+		<h2>Species : {{specie}}</h2>
+		<hr>
+		<h2>Movies : </h2>
+		{% for element in movies %}
+				<tr>
+					<td> <a href="{{url_for('movies', title=element)}}" >{{ element }} </a> </td>
+					<br>
+				</tr>    
+		{% endfor %}
+		<h3><a href="{{url_for('homepage')}}">Home</a></h3>
+	</body>
+</html>

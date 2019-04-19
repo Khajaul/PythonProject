@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Hello from Flask</title>
+	</head>
+	
+	<body>
+		<h1>Star Wars</h1>
+		<h2>Movies</h2>
+		{% for element in movies %}
+				<tr>
+					<td> <a href="{{url_for('movies', title=element)}}" >{{ element }}</a> </td>
+					<br>
+				</tr>    
+		{% endfor %}
+		<hr>
+		<h2>Planet</h2>
+		{% for element in planets %}
+				<tr>
+					<td> <a href="{{url_for('planets', name=element)}}" >{{ element }} </a></td>
+					<br>
+				</tr>    
+		{% endfor %}
+		<hr>
+		<h2>People</h2>
+		{% for element in people %}
+				<tr>
+					<td> <a href="{{url_for('people', name=element)}}" >{{ element }}</a> </td>
+					<br>
+				</tr>    
+		{% endfor %}
+		<hr>
+		<h2>Species</h2>
+		{% for element in specie %}
+				<tr>
+					<td> <a href="{{url_for('species', name=element)}}" > {{ element }}</a> </td>
+					<br>
+				</tr>    
+		{% endfor %}
+	</body>
+</html>

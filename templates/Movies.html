@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html>
+	<head>
+		
+	</head>
+	
+	<body>
+		<h1>{{title}}</h1>
+		<hr>
+		<h2>Director : {{director}}</h2>
+		<hr>
+		<h2>Producer : {{producer}}</h2>
+		<hr>
+		<h2>Characters : </h2>
+		{% for element in characters %}
+				<tr>
+					<td> <a href="{{url_for('people', name=element)}}" >{{ element }} </a> </td>
+					<br>
+				</tr>    
+		{% endfor %}
+		<hr>
+		<h2>Planets : </h2>
+		{% for element in planets %}
+				<tr>
+					<td> <a href="{{url_for('planets', name=element)}}" >{{ element }} </a> </td>
+					<br>
+				</tr>    
+		{% endfor %}
+		<hr>
+		<h2>Species : </h2>
+		{% for element in species %}
+				<tr>
+					<td> <a href="{{url_for('species', name=element)}}" >{{ element }} </a> </td>
+					<br>
+				</tr>    
+		{% endfor %}
+		<hr>
+		<p> {{resume}}
+		<h3><a href="{{url_for('homepage')}}">Home</a></h3>
+	</body>
+</html>
